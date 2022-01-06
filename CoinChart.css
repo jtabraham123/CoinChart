@@ -1,0 +1,62 @@
+h1 {
+    text-align: center;
+}
+#CC_Logo {
+  position: absolute;
+  left:0;
+  top: 0;
+  width:17vw;
+  height:100px;
+}
+.searchbar {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+h2 {
+  position: relative;
+  top: 50px;
+}
+.Menus {
+  margin-top: -30px;
+  text-align: center;
+  font-size: x-large;
+}
+#home {
+  padding: 20px;
+  border: solid black;
+  border-width: 0 10px;
+  border-top: solid black;
+  border-bottom: solid black;
+  width:10px; 
+  height:10px;
+}
+#about {
+  padding: 20px;
+  border: solid black;
+  border-width: 0 10px;
+  border-top: solid black;
+  border-bottom: solid black;
+  width:10px; 
+  height:10px;
+}
+#contact {
+  padding: 20px;
+  border: solid black;
+  border-width: 0 10px;
+  border-top: solid black;
+  border-bottom: solid black;
+  width:10px; 
+  height:10px;
+}
+
+@media screen and (max-width: 620px) {
+    .searchbar {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+  }
