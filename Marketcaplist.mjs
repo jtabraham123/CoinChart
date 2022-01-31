@@ -2,24 +2,6 @@ import fetch from 'node-fetch';
 import dotenv from "dotenv";
 dotenv.config();
 
-//Elegant recursive print function for outputting full JSON array with nested arrays 
-function print(data) {
-	for (var key in data) {
-		if (data[key] == null) {
-			console.log("\t".repeat(data.depth) + key + ": " + data[key]);
-		}
-		else if (typeof(data[key]) == 'object') {
-			data[key].depth = data.depth +1;
-			console.log("\t".repeat(data.depth) + key + " {");
-			print(data[key]);
-			console.log("\t".repeat(data.depth) + "}");
-		}
-		else if (key != "depth") {
-				console.log("\t".repeat(data.depth) + key + ": " + data[key]);
-		}
-	}
-}
-
 class HTTPResponseError extends Error {
 	constructor(response) {
 		super(`HTTP Error Response: ${response.status} ${response.statusText}`);
@@ -45,8 +27,7 @@ const response = await fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrenc
 try {
     checkStatus(response);
     response.json().then(json => {
-		json.depth = 0;
-		print(json);})
+		console.log(JSON.stringify(json, null, 2));})
 } catch (error) {
 	console.log(error);
 }

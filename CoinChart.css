@@ -6,7 +6,7 @@ h1 {
   left:0;
   top: 0;
   width:17vw;
-  height:100px;
+  height: 130px
 }
 .searchbar {
     position: absolute;
@@ -14,11 +14,12 @@ h1 {
     top: 16px;
 }
 h2 {
-  position: relative;
-  top: 50px;
+  margin-top: 60px;
+  text-align: center;
+  font-size: x-large;
 }
-.Menus {
-  margin-top: -30px;
+#Menus {
+  margin-top: 30px;
   text-align: center;
   font-size: x-large;
 }
@@ -30,6 +31,16 @@ h2 {
   border-bottom: solid black;
   width:10px; 
   height:10px;
+}
+
+table {
+   border: 3px solid gold;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 40px;
+}
+th {
+  border:3px solid gold;
 }
 #about {
   padding: 20px;
